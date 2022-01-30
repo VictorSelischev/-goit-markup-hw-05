@@ -747,10 +747,13 @@ img {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity var(--transition-duration) var(--transition-timing-function);
+  transition: opacity var(--transition-duration) var(--transition-timing-function),
+    transform var(--transition-duration) var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
+  transform: scale(0.3);
+
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
