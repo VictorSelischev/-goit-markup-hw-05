@@ -25,7 +25,7 @@
   --button-filter-color: #f5f4fa;
   --button-filter-color-hover: #188ce8;
   --color-border: #eeeeee;
-  --transition-duration: 2500ms;
+  --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -117,11 +117,13 @@ img {
 
 .site-nav-link {
   text-decoration: none;
-  color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--text-color);
+
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .site-nav-item {
@@ -141,6 +143,7 @@ img {
   left: 0;
 
   opacity: 0;
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
 
 .site-nav-link:hover:after,
@@ -163,11 +166,18 @@ img {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--text-color-two);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  color: var(--text-color-two);
+  transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--brand-color);
 }
 
 .icon-contact {
@@ -185,11 +195,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 } */
-
-.contacts-link:hover,
-.contacts-link:focus {
-  color: var(--brand-color);
-}
 
 /* ---------------- FOOTER ----------------- */
 .footer {
@@ -267,9 +272,11 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: var(--color-white);
+
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .footer-icon {
@@ -323,13 +330,15 @@ img {
   border-radius: 4px;
   padding: 10px 32px;
 
-  background-color: var(--brand-color);
   color: var(--color-white);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  background-color: var(--brand-color);
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 
   cursor: pointer;
 }
@@ -534,8 +543,10 @@ img {
   justify-content: center;
   width: 44px;
   height: 44px;
-  background-color: #ffffff;
   border-radius: 50%;
+
+  background-color: #ffffff;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .team-social-link:hover,
@@ -545,6 +556,7 @@ img {
 
 .team-social-icon {
   fill: var(--icon-color);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .team-social-link:hover .team-social-icon,
@@ -568,16 +580,20 @@ img {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   color: var(--icon-color);
-}
 
-.icon-client {
-  fill: currentColor;
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .client-link:hover,
 .client-link:focus {
   color: var(--brand-color);
   border-color: var(--brand-color);
+}
+
+.icon-client {
+  fill: currentColor;
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 
 .client-item:not(:last-child) {
@@ -599,6 +615,10 @@ img {
   letter-spacing: 0.03em;
 
   cursor: pointer;
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
+    color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .filter-button:hover,
@@ -651,6 +671,8 @@ img {
   display: block;
 
   text-decoration: none;
+
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-text-box {
@@ -707,11 +729,11 @@ img {
   overflow: auto;
 
   transform: translatey(101%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
 .portfolio-link:hover .portfolio-overlay {
   transform: translatey(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------------- BACKDROP ---------------- */
@@ -724,6 +746,8 @@ img {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--transition-duration) var(--transition-timing-function);
 }
 
 .backdrop.is-hidden {
