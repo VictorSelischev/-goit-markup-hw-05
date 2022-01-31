@@ -734,7 +734,8 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 
-.portfolio-link:hover .portfolio-overlay {
+.portfolio-link:hover .portfolio-overlay,
+.portfolio-link:focus .portfolio-overlay {
   transform: translatey(0);
 }
 
