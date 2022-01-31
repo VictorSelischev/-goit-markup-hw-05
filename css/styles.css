@@ -750,12 +750,10 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity var(--transition-duration) var(--transition-timing-function),
-    transform var(--transition-duration) var(--transition-timing-function);
+    visibility var(--transition-duration) var(--transition-timing-function);
 }
 
-.backdrop.is-hidden {
-  transform: scale(0.3);
-
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
